@@ -1,0 +1,20 @@
+<li
+  class="border-2 gap-5 border-black transition-all hover:translate-x-3 hover:border-teal-500 hover:shadow-[-5px_0_0_#14B8A6] rounded  p-5 flex items-center justify-between">
+  <div>
+    <div class="flex items-center justify-between">
+      <h1 [title]="new?.title" class="font-semibold text-xl w-[500px] text-ellipsis truncate">{{new?.title}}</h1>
+      <small class="opacity-50">{{ '2024-06-07T20:44:53Z' | date}}</small>
+    </div>
+    <div class="flex items-center gap-5 justify-between">
+      <p class="w-[500px]"> {{new?.description}} </p>
+      <img class="w-40 rounded aspect-video" loading="lazy" [src]="new?.urlToImage" [alt]="new?.title">
+    </div>
+    <div class="flex items-center justify-between">
+      <div class="flex flex-col opacity-50">
+        <small>Origen: {{new?.source?.name}}</small>
+        <small>Autor: {{new?.author}}</small>
+      </div>
+      <button class="font-semibold opacity-50 transition-colors hover:opacity-100">Ver Noticia </button>
+    </div>
+  </div>
+</li>
